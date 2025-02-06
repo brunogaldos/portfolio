@@ -5,10 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
-  <title>
-    Bruno | A Robotic Systems Engineering Student
-  </title>
-  <meta name="description" content="Bruno - A Robotic Systems Engineering Student specializing in optimization, computer vision, and machine learning.">
+  <title>Bruno Galdos| A Robotic Systems Engineering Student</title>
+  <meta name="description" content="Bruno - A robotic systems engineering student with expertise in Applied Numerical Optimization, Computer Vision, Machine Learning, and Mobile Robot Navigation.">
   <meta name="keywords" content="Bruno, Robotics, Computer Vision, Machine Learning, Mobile Robot Navigation" />
   <link rel="stylesheet" href="index.css" />
 </head>
@@ -19,6 +17,7 @@
       <nav class="nav" role="navigation">
         <ul class="nav__items">
           <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
           <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
           <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
@@ -26,10 +25,11 @@
     </div>
     <div class="header__text-box row">
       <div class="header__text">
+        <img src="./images/bruno.jpg" alt="Bruno's Photo" class="profile-pic">
         <h1 class="heading-primary">
           <span>Hi 👋, I'm Bruno</span>
         </h1>
-        <p>A Robotic Systems Engineering Student.</p>
+        <p>A Robotic Systems Engineering Student</p>
         <a href="#contact" class="btn btn--pink">Get in touch</a>
       </div>
     </div>
@@ -43,38 +43,40 @@
       </div>
     </section>
 
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <p>
-              I'm currently working on Mobile Robot Navigation and Localization, as well as Vision Transformers.
-            </p>
-          </div>
+    <!-- +++++ Projects Section +++++ -->
+    <div id="homepage" class="container pt">
+      <div id="robotics" class="row mt centered">
+        <h2>Robotics Projects</h2>
+        <br>
+        <div class="col-lg-4">
+          <a target="_blank" href="work/hdmap_construction.html">
+            <img class="img-responsive" src="assets/img/online_hdmap/demo_hdmap.png" alt="" />
+          </a>
+          <p><b>ONLINE HD-MAP CONSTRUCTION</b></p>
+          <a target="_blank" href="https://github.com/brunogaldos/Omni_Robot">
+            <img class="img-responsive" src="assets/img/Omni_holonomic_robot/omni_robot.png" alt="" />
+          </a>
+          <p><b>AUTONOMOUS OMNI-DIRECTIONAL ROBOT</b></p>
+        </div>
+        <div class="col-lg-4">
+          <a target="_blank" href="work/self_driving.html">
+            <img class="img-responsive" src="assets/img/Self_driving/self_driving_multiple.jpg" alt="" />
+          </a>
+          <p><b>SMALL-SCALED AUTOMATED VEHICLE</b></p>
+        </div>
+        <div class="col-lg-4">
+          <a target="_blank" href="https://github.com/brunogaldos/robotics_algorithms">
+            <img class="img-responsive" src="assets/img/robotics/DWA.png" alt="" />
+          </a>
+          <p><b>ROBOTICS ALGORITHMS IN C++ WITH ROS2</b></p>
         </div>
       </div>
-    </section>
-  </main>
-
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Get in Touch</h2>
-      <p>Feel free to reach out for collaborations or inquiries!</p>
-      <a href="mailto:your-email@example.com" class="btn">your-email@example.com</a>
     </div>
-  </section>
+  </main>
 
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="#" title="GitHub">
-            <img src="./images/github.svg" class="footer__social-image" alt="GitHub">
-          </a>
-        </li>
-      </ul>
-      <p>&copy; 2025 - Designed by Bruno</p>
+      <p>&copy; 2025 - Bruno's Portfolio</p>
     </div>
   </footer>
   <script src="./index.js"></script>
