@@ -16,6 +16,11 @@
     src: url('./fonts/Jost-Regular.ttf') format('woff');
 }
 
+
+img.profile-photo {
+    max-width: 150px;
+    height: auto;
+}
 * {
     margin: 0;
     padding: 0;
