@@ -69,7 +69,7 @@ html {
 }
 
 #profile-image {
-    width: 150px; /* Set the desired width */
+    width: 200px; /* Set the desired width */
     height: auto; /* Maintain aspect ratio */
 }
 body {
