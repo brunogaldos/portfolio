@@ -9,6 +9,21 @@
   <meta name="description" content="Bruno - A robotic systems engineering student with expertise in Applied Numerical Optimization, Computer Vision, Machine Learning, and Mobile Robot Navigation.">
   <meta name="keywords" content="Bruno, Robotics, Computer Vision, Machine Learning, Mobile Robot Navigation" />
   <link rel="stylesheet" href="index.css" />
+  <style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .project-item {
+      text-align: center;
+    }
+    .project-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 
 <body>
@@ -27,9 +42,9 @@
       <div class="header__text">
         <img src="./images/profile.png" id="profile-image" alt="Profile Image">
         <h1 class="heading-primary">
-          <span>Hello World, I'm Bruno </span>
+          <span>Hello World, I'm Bruno</span>
         </h1>
-        <p>a Robotic and machine learning enthusiast</p>
+        <p>Master’s in Robot Systems Engineering from RWTH Aachen with expertise in AMR navigation, robot perception, robot manipulators, and visual servoing. Worked on SLAM, LiDAR, and motion capture at WZL and developed AI-based AGV localization at Siemens. Proficient in Python, C++, ROS, and Docker. Passionate about AI-driven robotics.</p>
         <a href="#contact" class="btn btn--pink">Get in touch</a>
       </div>
     </div>
@@ -39,36 +54,38 @@
     <section class="work" id="work">
       <div class="row">
         <h2>My Expertise</h2>
-        <p>Master’s in Robot Systems Engineering from RWTH Aachen with expertise in AMR navigation, robot perception, robot manipulators and visual servoing. Worked on SLAM, LiDAR, and motion capture at WZL and developed AI-based AGV localization at Siemens. Proficient in Python, C++, ROS, and Docker. Passionate about AI-driven robotics.</p>
       </div>
     </section>
 
-    <!-- +++++ Projects Section +++++ -->
     <div id="homepage" class="container pt">
       <div id="robotics" class="row mt centered">
         <h2>Robotics Projects</h2>
         <br>
-        <div class="col-lg-4">
-          <p><b>Autonomous mobile robot and motion capture system</b></p>
-          <a target="_blank" href="https://github.com/brunogaldos/Mobile-robot-controller-">
-            <img class="img-responsive" src="images/navigation.png" alt="" />
-          </a>
-          <p><b>Path planning and picking task with object detection</b></p>
-          <a target="_blank" href="https://github.com/brunogaldos/Moveit-object-detection">
-            <img class="img-responsive" src="images/arm.png" alt="" />
-          </a>
-          <p><b>Mobile robot navigation with Lidar</b></p>
-        </div>
-        <div class="col-lg-4">
-          <a target="_blank" href="https://github.com/brunogaldos/navigation">
-            <img class="img-responsive" src="images/navigation.png" alt="" />
-          </a>
-          <p><b>Vision transformers for object classification</b></p>
-        </div>
-        <div class="col-lg-4">
-          <a target="_blank" href="https://github.com/brunogaldos/Vision-Transformers">
-            <img class="img-responsive" src="images/vision_transformers.png" alt="" />
-          </a>
+        <div class="projects-grid">
+          <div class="project-item">
+            <p><b>Autonomous mobile robot and motion capture system</b></p>
+            <a target="_blank" href="https://github.com/brunogaldos/Mobile-robot-controller-">
+              <img class="img-responsive" src="images/motion.png" alt="Autonomous mobile robot" />
+            </a>
+          </div>
+          <div class="project-item">
+            <p><b>Path planning and picking task with object detection</b></p>
+            <a target="_blank" href="https://github.com/brunogaldos/Moveit-object-detection">
+              <img class="img-responsive" src="images/arm.png" alt="Path planning and object detection" />
+            </a>
+          </div>
+          <div class="project-item">
+            <p><b>Mobile robot navigation with Lidar</b></p>
+            <a target="_blank" href="https://github.com/brunogaldos/navigation">
+              <img class="img-responsive" src="images/navigation.png" alt="Mobile robot navigation" />
+            </a>
+          </div>
+          <div class="project-item">
+            <p><b>Vision transformers for object classification</b></p>
+            <a target="_blank" href="https://github.com/brunogaldos/Vision-Transformers">
+              <img class="img-responsive" src="images/vision_transformers.png" alt="Vision transformers" />
+            </a>
+          </div>
         </div>
       </div>
     </div>

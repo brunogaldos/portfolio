@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/profile.png" />
+  <title>Bruno | A Robotic Systems Engineering Student</title>
+  <meta name="description" content="Bruno - A robotic systems engineering student with expertise in Applied Numerical Optimization, Computer Vision, Machine Learning, and Mobile Robot Navigation.">
+  <meta name="keywords" content="Bruno, Robotics, Computer Vision, Machine Learning, Mobile Robot Navigation" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__text-box row">
+      <div class="header__text">
+        <img src="./images/profile.png" id="profile-image" alt="Profile Image">
+        <h1 class="heading-primary">
+          <span>Hello World, I'm Bruno </span>
+        </h1>
+        <p>a Robotic and machine learning enthusiast</p>
+        <a href="#contact" class="btn btn--pink">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <section class="work" id="work">
+      <div class="row">
+        <h2>My Expertise</h2>
+        <p>Master’s in Robot Systems Engineering from RWTH Aachen with expertise in AMR navigation, robot perception, robot manipulators and visual servoing. Worked on SLAM, LiDAR, and motion capture at WZL and developed AI-based AGV localization at Siemens. Proficient in Python, C++, ROS, and Docker. Passionate about AI-driven robotics.</p>
+      </div>
+    </section>
+
+    <!-- +++++ Projects Section +++++ -->
+    <div id="homepage" class="container pt">
+      <div id="robotics" class="row mt centered">
+        <h2>Robotics Projects</h2>
+        <br>
+        <div class="col-lg-4">
+          <p><b>Autonomous mobile robot and motion capture system</b></p>
+          <a target="_blank" href="https://github.com/brunogaldos/Mobile-robot-controller-">
+            <img class="img-responsive" src="images/motion.png" alt="" />
+          </a>
+          <p><b>Path planning and picking task with object detection</b></p>
+          <a target="_blank" href="https://github.com/brunogaldos/Moveit-object-detection">
+            <img class="img-responsive" src="images/arm.png" alt="" />
+          </a>
+          <p><b>Mobile robot navigation with Lidar</b></p>
+        </div>
+        <div class="col-lg-4">
+          <a target="_blank" href="https://github.com/brunogaldos/navigation">
+            <img class="img-responsive" src="images/navigation.png" alt="" />
+          </a>
+          <p><b>Vision transformers for object classification</b></p>
+        </div>
+        <div class="col-lg-4">
+          <a target="_blank" href="https://github.com/brunogaldos/Vision-Transformers">
+            <img class="img-responsive" src="images/vision_transformers.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <p>&copy; 2025 - Bruno's Portfolio</p>
+    </div>
+  </footer>
+  <script src="./index.js"></script>
+</body>
+
+</html>
