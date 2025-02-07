@@ -376,11 +376,13 @@ body:not(.user-is-tabbing) a:focus {
 
 .nav__link {
     position: relative;
-    display: inline-block;
+    display: block; /* Changed from inline-block to block */
+    width: 100%; /* Ensures the link takes up the full width */
     padding: 1rem 0;
     text-decoration: none;
     color: inherit;
     transition: all .2s;
+    text-align: center; /* Centers text inside the full-width link */
 }
 
 .nav__link::after {
@@ -389,7 +391,7 @@ body:not(.user-is-tabbing) a:focus {
     bottom: 0;
     left: 0;
     right: 100%;
-    display: inline-block;
+    display: block; /* Ensure the pseudo-element behaves properly */
     height: 1rem;
     background: var(--white);
     transition: all 0.25s cubic-bezier(1, 0.68, 0.16, 0.9);
