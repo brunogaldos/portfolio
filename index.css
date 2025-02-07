@@ -376,13 +376,14 @@ body:not(.user-is-tabbing) a:focus {
 
 .nav__link {
     position: relative;
-    display: block; /* Changed from inline-block to block */
-    width: 100%; /* Ensures the link takes up the full width */
+    display: flex; /* Allows the link to expand fully */
+    align-items: center; /* Centers text vertically */
+    justify-content: center; /* Centers text horizontally */
+    width: 100%; /* Makes sure the link takes full width */
     padding: 1rem 0;
     text-decoration: none;
     color: inherit;
     transition: all .2s;
-    text-align: center; /* Centers text inside the full-width link */
 }
 
 .nav__link::after {
