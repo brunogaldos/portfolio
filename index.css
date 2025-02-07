@@ -346,7 +346,9 @@ body:not(.user-is-tabbing) a:focus {
     justify-content: flex-end;
     padding: var(--gutter-normal) 0;
 }
-
+.nav__item {
+    display: block; /* Ensures the list item takes full width */
+}
 .nav__items {
     display: flex;
     list-style: none;
