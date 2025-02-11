@@ -1,85 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="image/png" href="./images/profile.png" />
-  <title>Bruno | A Robotic Systems Engineering Student</title>
-  <meta name="description" content="Bruno - A robotic systems engineering student with expertise in Applied Numerical Optimization, Computer Vision, Machine Learning, and Mobile Robot Navigation.">
-  <meta name="keywords" content="Bruno, Robotics, Computer Vision, Machine Learning, Mobile Robot Navigation" />
-  <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            color: #0056b3;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
-  <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="header__text-box row">
-      <div class="header__text">
-        <img src="./images/profile.png" id="profile-image" alt="Profile Image">
-        <h1 class="heading-primary">
-          <span>Hello World, I'm Bruno </span>
-        </h1>
-        <p>a Robotic and machine learning enthusiast</p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
-      </div>
-    </div>
-  </header>
+    <div class="container">
+        <h1>Hello there! 👋</h1>
+        <p>
+            I’m a Peruvian robotic engineer specializing in AI and robotic systems.  
+            For my master’s thesis, I developed a real-time navigation controller for mobile robots, integrating 
+            motion capture systems, LIDAR, SLAM, C++, and ROS to enhance mapping accuracy and efficiency in industrial applications.  
+            Currently, I work as an assistant researcher at the WZL Institute, where I design advanced algorithms for robotic perception 
+            and picking tasks using a UR10 manipulator and an Intel depth camera.
+        </p>
 
-  <main role="main">
-    <section class="work" id="work">
-      <div class="row">
-        <h2>My Expertise</h2>
-        <p>Master’s in Robot Systems Engineering from RWTH Aachen with expertise in AMR navigation, robot perception, robot manipulators and visual servoing. Worked on SLAM, LiDAR, and motion capture at WZL and developed AI-based AGV localization at Siemens. Proficient in Python, C++, ROS, and Docker. Passionate about AI-driven robotics.</p>
-      </div>
-    </section>
+        <p>
+            Beyond robotics, I have deep expertise in artificial intelligence. I develop and train Large Language Models (LLMs) 
+            with 45 billion parameters for AI agent integration, leveraging frameworks like TensorFlow, PyTorch, and Keras.  
+            During my internship at Siemens, I gained hands-on experience deploying and optimizing machine learning techniques for 
+            AGV localization using SIMATIC RTLS signals based on UWD technology. These experiences have equipped me with a strong foundation 
+            in AI, robotics, and software engineering, with proficiency in Python, SQL, C++, and extensive experience with Linux, ROS, 
+            Docker, SolidWorks, Git, and microcontrollers.
+        </p>
 
-    <!-- +++++ Projects Section +++++ -->
-    <div id="homepage" class="container pt">
-      <div id="robotics" class="row mt centered">
-        <h2>Robotics Projects</h2>
-        <br>
-        <div class="col-lg-4">
-          <p><b>Autonomous mobile robot and motion capture system</b></p>
-          <a target="_blank" href="https://github.com/brunogaldos/Mobile-robot-controller-">
-            <img class="img-responsive" src="images/motion.png" alt="" />
-          </a>
-          <p><b>Path planning and picking task with object detection</b></p>
-          <a target="_blank" href="https://github.com/brunogaldos/Moveit-object-detection">
-            <img class="img-responsive" src="images/arm.png" alt="" />
-          </a>
-          <p><b>Mobile robot navigation with Lidar</b></p>
-        </div>
-        <div class="col-lg-4">
-          <a target="_blank" href="https://github.com/brunogaldos/navigation">
-            <img class="img-responsive" src="images/navigation.png" alt="" />
-          </a>
-          <p><b>Vision transformers for object classification</b></p>
-        </div>
-        <div class="col-lg-4">
-          <a target="_blank" href="https://github.com/brunogaldos/Vision-Transformers">
-            <img class="img-responsive" src="images/vision_transformers.png" alt="" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </main>
+        <p>
+            I’m also passionate about innovation and entrepreneurship. I have contributed to several tech development projects, winning 
+            national competitions for tech startups and hackathons. Here are some highlights:
+        </p>
 
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-      <p>&copy; 2025 - Bruno's Portfolio</p>
+        <h3>🏆 Startup Competition Win</h3>
+        <a href="https://encuentro.pe/vida-universitaria/idea-de-negocio-arequipeno-gano-el-concurso-para-quitarse-el-sombrero/" target="_blank">
+            <img src="pqs.jpg" alt="Startup Competition Win">
+        </a>
+        <p><a href="https://encuentro.pe/vida-universitaria/idea-de-negocio-arequipeno-gano-el-concurso-para-quitarse-el-sombrero/" target="_blank">Read more about it here</a></p>
+
+        <h3>🏅 Hackathon Victory</h3>
+        <a href="https://www.linkedin.com/posts/stephan-oehme-41b7674a_and-the-winner-is-the-forth-hackathon-ugcPost-7284232188898738179-4fpk?utm_source=share&utm_medium=member_desktop" target="_blank">
+            <img src="hackaton.jpg" alt="Hackathon Victory">
+        </a>
+        <p><a href="https://www.linkedin.com/posts/stephan-oehme-41b7674a_and-the-winner-is-the-forth-hackathon-ugcPost-7284232188898738179-4fpk?utm_source=share&utm_medium=member_desktop" target="_blank">Check out the announcement</a></p>
+
+        <p>
+            I thrive in dynamic, forward-thinking environments where creativity and problem-solving drive meaningful change.  
+            My goal is to be part of a team that not only pioneers innovation but also shapes the future—one that challenges 
+            me to grow while making a tangible impact in AI and robotics.
+        </p>
     </div>
-  </footer>
-  <script src="./index.js"></script>
 </body>
-
 </html>
