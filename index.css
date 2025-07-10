@@ -1,17 +1,16 @@
-/* benscott.dev inspired modern portfolio style */
-
+/* --- Restore dark theme and pink accent, and reduce hero width --- */
 :root {
   --font-main: 'Inter', 'Segoe UI', Arial, sans-serif;
-  --color-bg: #f9f9fb;
-  --color-bg-card: #fff;
-  --color-text: #222;
-  --color-nav: #fff;
-  --color-nav-border: #e5e7eb;
-  --color-accent: #2563eb;
-  --color-accent-hover: #1d4ed8;
-  --color-footer: #f3f4f6;
+  --color-bg: #111217;
+  --color-bg-card: #181924;
+  --color-text: #f0e9f2;
+  --color-nav: #181924;
+  --color-nav-border: #23232b;
+  --color-accent: #ff3258;
+  --color-accent-hover: #e6003a;
+  --color-footer: #181924;
   --radius: 16px;
-  --shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
+  --shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
   --max-width: 700px;
 }
 
@@ -86,10 +85,14 @@ ul.nav__items {
   flex-direction: column;
   align-items: center;
   padding: 2.5rem 0 2rem 0;
+  max-width: 420px;
+  margin: 0 auto;
 }
 
 .header__text {
   text-align: center;
+  max-width: 420px;
+  margin: 0 auto;
 }
 
 #profile-image {
@@ -102,7 +105,7 @@ ul.nav__items {
 }
 
 .heading-primary {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: var(--color-accent);
@@ -110,7 +113,7 @@ ul.nav__items {
 
 .header__text p {
   font-size: 1.1rem;
-  color: #444;
+  color: #e5e5e6da;
   margin-bottom: 1.5rem;
 }
 
@@ -155,7 +158,6 @@ h2 {
   color: var(--color-accent);
   text-align: center;
 }
-
 h2::after {
   content: '';
   display: block;
@@ -179,7 +181,7 @@ h2::after {
 }
 
 .project-item {
-  background: #f3f4f6;
+  background: #23232b;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 1.2rem 1rem 1.5rem 1rem;
@@ -187,7 +189,7 @@ h2::after {
   transition: box-shadow 0.2s, transform 0.2s;
 }
 .project-item:hover {
-  box-shadow: 0 4px 24px 0 rgba(37,99,235,0.10);
+  box-shadow: 0 4px 24px 0 rgba(255,50,88,0.10);
   transform: translateY(-4px) scale(1.02);
 }
 .project-item img {
@@ -198,7 +200,7 @@ h2::after {
 }
 .project-item p {
   font-weight: 600;
-  color: #222;
+  color: #fff;
   margin-bottom: 0.5rem;
 }
 
@@ -206,7 +208,7 @@ h2::after {
   text-align: center;
 }
 .contact__info p {
-  color: #444;
+  color: #e5e5e6da;
   margin-bottom: 1.2rem;
 }
 
@@ -216,7 +218,7 @@ footer.footer {
   padding: 1.5rem 0 1rem 0;
   color: #888;
   font-size: 1rem;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid #23232b;
   margin-top: 2rem;
 }
 
@@ -230,6 +232,10 @@ footer.footer {
   }
   .header__text-box {
     padding: 1.2rem 0 1rem 0;
+    max-width: 98vw;
+  }
+  .header__text {
+    max-width: 98vw;
   }
   .heading-primary {
     font-size: 1.5rem;
