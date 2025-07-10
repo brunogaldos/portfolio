@@ -11,7 +11,7 @@
   --color-footer: #181924;
   --radius: 16px;
   --shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
-  --max-width: 700px;
+  --max-width: 900px;
 }
 
 html {
@@ -40,7 +40,12 @@ body {
   padding: 0 1.5rem;
 }
 
-header.header {
+/* Make only the navigation sticky, not the entire header */
+nav.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0 0.5rem 0;
   background: var(--color-nav);
   border-bottom: 1px solid var(--color-nav-border);
   position: sticky;
@@ -49,11 +54,10 @@ header.header {
   box-shadow: var(--shadow);
 }
 
-nav.nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1.5rem 0 0.5rem 0;
+header.header {
+  background: var(--color-nav);
+  border-bottom: 1px solid var(--color-nav-border);
+  /* Remove sticky positioning */
 }
 
 ul.nav__items {
@@ -95,29 +99,13 @@ ul.nav__items {
   margin: 0 auto;
 }
 
-.header__hero {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  width: 100%;
-}
-
 #profile-image {
-  width: 110px;
-  height: 110px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 0;
+  margin-bottom: 1.5rem;
   border: 3px solid var(--color-accent);
-  flex-shrink: 0;
-}
-
-.header__text {
-  text-align: left;
-  max-width: 260px;
-  margin: 0;
 }
 
 .heading-primary {
@@ -193,15 +181,6 @@ h2::after {
 @media (max-width: 700px) {
   .projects-grid {
     grid-template-columns: 1fr;
-  }
-  .header__hero {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
-  }
-  .header__text {
-    text-align: center;
-    max-width: 98vw;
   }
 }
 
