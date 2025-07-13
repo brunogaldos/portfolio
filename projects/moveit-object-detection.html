@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/jpg" href="../images/profile.jpg" />
+  <title>MoveIt Object Detection | Bruno's Portfolio</title>
+  <meta name="description" content="Path planning and picking task with object detection using MoveIt - A robotic systems engineering project by Bruno.">
+  <link rel="stylesheet" href="../index.css" />
+  <style>
+    .project-hero {
+      text-align: center;
+      padding: 2rem 0;
+    }
+    .project-hero img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+      margin: 1rem 0;
+      box-shadow: 0 4px 24px 0 rgba(0,0,0,0.3);
+    }
+    .project-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .project-section {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: #23232b;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
+    }
+    .project-section h3 {
+      color: #ff3258;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    .tech-tag {
+      background: #ff3258;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .github-link {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #333;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .github-link:hover {
+      background: #555;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #ff3258;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .back-link:hover {
+      color: #e6003a;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="../index.html#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="../index.html#projects" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="../about.html" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="../index.html#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main">
+    <div class="container pt">
+      <div class="row">
+        <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+        
+        <div class="project-hero">
+          <h1>MoveIt Object Detection & Path Planning</h1>
+          <p>Advanced robotic arm control with computer vision for intelligent picking tasks</p>
+          <img src="../images/arm.png" alt="Path planning and object detection with robotic arm" />
+        </div>
+
+        <div class="project-content">
+          <div class="project-section">
+            <h3>Project Overview</h3>
+            <p>This project combines MoveIt motion planning framework with computer vision to create an intelligent robotic system capable of detecting objects and performing precise picking tasks. The system integrates real-time object detection with advanced path planning algorithms for autonomous manipulation.</p>
+          </div>
+
+          <div class="project-section">
+            <h3>Key Features</h3>
+            <ul>
+              <li>Real-time object detection and recognition</li>
+              <li>Advanced path planning with collision avoidance</li>
+              <li>Precise robotic arm control and manipulation</li>
+              <li>Integration of computer vision with motion planning</li>
+              <li>Autonomous picking and placing operations</li>
+              <li>Multi-object handling capabilities</li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h3>Technical Implementation</h3>
+            <p>The system leverages MoveIt's powerful motion planning capabilities combined with computer vision algorithms for object detection. It uses ROS (Robot Operating System) for seamless integration between vision processing and robotic control systems.</p>
+            
+            <h4>Core Components:</h4>
+            <ul>
+              <li>Computer vision pipeline for object detection</li>
+              <li>MoveIt motion planning and execution</li>
+              <li>Collision detection and avoidance</li>
+              <li>Inverse kinematics for precise positioning</li>
+              <li>Real-time sensor feedback integration</li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h3>Technologies Used</h3>
+            <div class="tech-stack">
+              <span class="tech-tag">MoveIt</span>
+              <span class="tech-tag">ROS</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Computer Vision</span>
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">Path Planning</span>
+              <span class="tech-tag">Object Detection</span>
+              <span class="tech-tag">Robotic Manipulation</span>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h3>Project Impact</h3>
+            <p>This project demonstrates the integration of computer vision with robotic manipulation, showcasing how modern AI techniques can enhance traditional robotics applications. It provides a foundation for developing intelligent manufacturing and automation systems that can adapt to dynamic environments.</p>
+          </div>
+
+          <div class="project-section">
+            <h3>GitHub Repository</h3>
+            <p>Explore the complete implementation, documentation, and codebase on GitHub:</p>
+            <a href="https://github.com/brunogaldos/Moveit-object-detection" target="_blank" class="github-link">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <p>&copy; 2025 - Bruno's Portfolio</p>
+    </div>
+  </footer>
+  <script src="../index.js"></script>
+</body>
+
+</html> 

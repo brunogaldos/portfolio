@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/jpg" href="../images/profile.jpg" />
+  <title>2-Wheeled Self-Balancing Robot | Bruno's Portfolio</title>
+  <meta name="description" content="2 wheeled self-balancing robot - Advanced control system for autonomous balance by Bruno.">
+  <link rel="stylesheet" href="../index.css" />
+  <style>
+    .project-hero {
+      text-align: center;
+      padding: 2rem 0;
+    }
+    .project-hero img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+      margin: 1rem 0;
+      box-shadow: 0 4px 24px 0 rgba(0,0,0,0.3);
+    }
+    .project-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .project-section {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: #23232b;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
+    }
+    .project-section h3 {
+      color: #ff3258;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    .tech-tag {
+      background: #ff3258;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .github-link {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #333;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .github-link:hover {
+      background: #555;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #ff3258;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .back-link:hover {
+      color: #e6003a;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="../index.html#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="../index.html#projects" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="../about.html" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="../index.html#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main">
+    <div class="container pt">
+      <div class="row">
+        <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+        
+        <div class="project-hero">
+          <h1>2-Wheeled Self-Balancing Robot</h1>
+          <p>Advanced control system for autonomous two-wheeled robot with dynamic balance capabilities</p>
+          <img src="../images/2_wheeled.jpg" alt="2 wheeled self-balancing robot" />
+        </div>
+
+        <div class="project-content">
+          <div class="project-section">
+            <h3>Project Overview</h3>
+            <p>This project implements a sophisticated self-balancing robot system using two wheels and advanced control algorithms. The robot maintains dynamic balance through real-time sensor feedback and precise motor control, demonstrating principles of inverted pendulum control and robotics.</p>
+          </div>
+
+          <div class="project-section">
+            <h3>Key Features</h3>
+            <ul>
+              <li>Real-time self-balancing control system</li>
+              <li>Inverted pendulum dynamics implementation</li>
+              <li>Precise motor control and feedback loops</li>
+              <li>IMU sensor integration for orientation detection</li>
+              <li>PID control algorithms for stability</li>
+              <li>Autonomous navigation capabilities</li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h3>Technical Implementation</h3>
+            <p>The system utilizes advanced control theory to maintain balance in a dynamically unstable configuration. It combines sensor fusion, real-time processing, and precise motor control to create a stable and responsive balancing platform.</p>
+            
+            <h4>Core Components:</h4>
+            <ul>
+              <li>IMU sensor for orientation and angular velocity</li>
+              <li>PID control loops for balance maintenance</li>
+              <li>Motor control systems with feedback</li>
+              <li>Real-time processing and decision making</li>
+              <li>Power management and safety systems</li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h3>Technologies Used</h3>
+            <div class="tech-stack">
+              <span class="tech-tag">Control Systems</span>
+              <span class="tech-tag">PID Control</span>
+              <span class="tech-tag">IMU Sensors</span>
+              <span class="tech-tag">Motor Control</span>
+              <span class="tech-tag">Embedded Systems</span>
+              <span class="tech-tag">Real-time Processing</span>
+              <span class="tech-tag">Sensor Fusion</span>
+              <span class="tech-tag">Robotics</span>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h3>Project Impact</h3>
+            <p>This self-balancing robot demonstrates fundamental principles of control theory and robotics, providing a practical implementation of inverted pendulum dynamics. It serves as an excellent platform for understanding balance control, sensor integration, and real-time systems.</p>
+          </div>
+
+          <div class="project-section">
+            <h3>GitHub Repository</h3>
+            <p>Explore the complete implementation, documentation, and codebase on GitHub:</p>
+            <a href="https://github.com/itsMohitShah/InfineonHackathon23042025" target="_blank" class="github-link">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <p>&copy; 2025 - Bruno's Portfolio</p>
+    </div>
+  </footer>
+  <script src="../index.js"></script>
+</body>
+
+</html> 

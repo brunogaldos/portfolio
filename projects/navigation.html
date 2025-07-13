@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/jpg" href="../images/profile.jpg" />
+  <title>Mobile Robot Navigation | Bruno's Portfolio</title>
+  <meta name="description" content="Mobile robot navigation with LiDAR - Advanced autonomous navigation system by Bruno.">
+  <link rel="stylesheet" href="../index.css" />
+  <style>
+    .project-hero {
+      text-align: center;
+      padding: 2rem 0;
+    }
+    .project-hero img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+      margin: 1rem 0;
+      box-shadow: 0 4px 24px 0 rgba(0,0,0,0.3);
+    }
+    .project-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .project-section {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: #23232b;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
+    }
+    .project-section h3 {
+      color: #ff3258;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    .tech-tag {
+      background: #ff3258;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .github-link {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #333;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .github-link:hover {
+      background: #555;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #ff3258;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .back-link:hover {
+      color: #e6003a;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="../index.html#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="../index.html#projects" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="../about.html" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="../index.html#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main">
+    <div class="container pt">
+      <div class="row">
+        <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+        
+        <div class="project-hero">
+          <h1>Mobile Robot Navigation with LiDAR</h1>
+          <p>Advanced autonomous navigation system using LiDAR sensors for precise environment mapping and path planning</p>
+          <img src="../images/navigation.png" alt="Mobile robot navigation with LiDAR" />
+        </div>
+
+        <div class="project-content">
+          <div class="project-section">
+            <h3>Project Overview</h3>
+            <p>This project implements a sophisticated autonomous navigation system for mobile robots using LiDAR technology. The system provides real-time environment perception, mapping, and intelligent path planning capabilities for safe and efficient robot navigation in complex environments.</p>
+          </div>
+
+          <div class="project-section">
+            <h3>Key Features</h3>
+            <ul>
+              <li>Real-time LiDAR-based environment mapping</li>
+              <li>Advanced SLAM (Simultaneous Localization and Mapping)</li>
+              <li>Dynamic obstacle detection and avoidance</li>
+              <li>Optimal path planning algorithms</li>
+              <li>Precise localization and pose estimation</li>
+              <li>Multi-sensor fusion for robust navigation</li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h3>Technical Implementation</h3>
+            <p>The navigation system utilizes cutting-edge algorithms for SLAM, path planning, and obstacle avoidance. It integrates LiDAR data with other sensor inputs to create accurate environment maps and enable safe autonomous navigation in dynamic environments.</p>
+            
+            <h4>Core Components:</h4>
+            <ul>
+              <li>LiDAR sensor integration and data processing</li>
+              <li>SLAM algorithms for environment mapping</li>
+              <li>Path planning with A* and RRT algorithms</li>
+              <li>Obstacle detection and avoidance systems</li>
+              <li>Localization using particle filters</li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h3>Technologies Used</h3>
+            <div class="tech-stack">
+              <span class="tech-tag">ROS</span>
+              <span class="tech-tag">LiDAR</span>
+              <span class="tech-tag">SLAM</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Path Planning</span>
+              <span class="tech-tag">Navigation Stack</span>
+              <span class="tech-tag">Sensor Fusion</span>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h3>Project Impact</h3>
+            <p>This navigation system demonstrates advanced capabilities in autonomous robotics, providing a robust foundation for mobile robot applications in various industries. It showcases the integration of multiple sensor technologies and sophisticated algorithms for reliable autonomous navigation.</p>
+          </div>
+
+          <div class="project-section">
+            <h3>GitHub Repository</h3>
+            <p>Explore the complete implementation, documentation, and codebase on GitHub:</p>
+            <a href="https://github.com/brunogaldos/navigation" target="_blank" class="github-link">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <p>&copy; 2025 - Bruno's Portfolio</p>
+    </div>
+  </footer>
+  <script src="../index.js"></script>
+</body>
+
+</html> 
