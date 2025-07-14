@@ -105,19 +105,66 @@
 
         <div class="project-content">
           <div class="project-section">
-            <h3>Project Overview</h3>
-            <p>This project was created during a hackathon to help optimize mining operations. By using smart AI, it predicts how much material will be in the bins at each stage of the mining process. The goal is to make mining more efficient, reduce waste, and help teams make better decisions using data.</p>
+            <h3>Overview</h3>
+            <p>This project was developed during the Hackmining event to optimize the crusher process for a mining corporation. It leverages a Recurrent Equilibrium Network (REN) to predict new bin levels by combining historical data with current control inputs, such as traffic light status and feeder motor signals. The model learns an equilibrium representation that captures the system's temporal patterns and uses Broyden’s method to solve for the hidden variable reflecting the dynamic state. Training is performed using Mean Squared Error (MSE) loss and the Adam optimizer.</p>
           </div>
 
           <div class="project-section">
-            <h3>Features & Components</h3>
+            <h3>Key Features</h3>
             <ul>
-              <li>AI-powered predictions for mining process outcomes</li>
-              <li>Analyzes real industrial data for smarter resource management</li>
-              <li>Real-time process optimization and forecasting</li>
-              <li>Helps prevent bottlenecks and improve efficiency</li>
-              <li>Easy to use and adaptable to different mining scenarios</li>
+              <li>Recurrent Equilibrium Network (REN) for time-series prediction</li>
+              <li>Combines historical and real-time control signals</li>
+              <li>Captures temporal patterns in mining process data</li>
+              <li>Uses Broyden’s method for dynamic state estimation</li>
+              <li>Trained with MSE loss and Adam optimizer</li>
             </ul>
+          </div>
+
+          <div class="project-section">
+            <h3>Visual Results</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+              <div class="img-card" style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 340px; width: 100%; text-align: center;">
+                <img src="hacking-mining/Screenshot from 2025-07-14 16-14-42.png" alt="REN Output Visualization 1" style="max-width: 320px; width: 100%; border-radius: 12px; margin-bottom: 0.5rem; cursor: pointer;" onclick="openModal(this.src)" />
+                <div style="color: #aaa; font-size: 1rem;">REN Output Visualization 1</div>
+              </div>
+              <div class="img-card" style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 340px; width: 100%; text-align: center;">
+                <img src="hacking-mining/Screenshot from 2025-07-14 16-13-34.png" alt="REN Output Visualization 2" style="max-width: 320px; width: 100%; border-radius: 12px; margin-bottom: 0.5rem; cursor: pointer;" onclick="openModal(this.src)" />
+                <div style="color: #aaa; font-size: 1rem;">REN Output Visualization 2</div>
+              </div>
+              <div class="img-card" style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 340px; width: 100%; text-align: center;">
+                <img src="hacking-mining/Screenshot from 2025-07-14 16-13-10.png" alt="REN Output Visualization 3" style="max-width: 320px; width: 100%; border-radius: 12px; margin-bottom: 0.5rem; cursor: pointer;" onclick="openModal(this.src)" />
+                <div style="color: #aaa; font-size: 1rem;">REN Output Visualization 3</div>
+              </div>
+            </div>
+            <!-- Modal for image enlargement -->
+            <div id="imgModal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); align-items:center; justify-content:center;">
+              <span onclick="closeModal()" style="position:absolute; top:30px; right:50px; color:#fff; font-size:2.5rem; cursor:pointer;">&times;</span>
+              <img id="modalImg" src="" style="max-width:90vw; max-height:90vh; border-radius: 16px; box-shadow: 0 2px 24px rgba(0,0,0,0.5);" />
+            </div>
+            <script>
+              function openModal(src) {
+                document.getElementById('imgModal').style.display = 'flex';
+                document.getElementById('modalImg').src = src;
+              }
+              function closeModal() {
+                document.getElementById('imgModal').style.display = 'none';
+                document.getElementById('modalImg').src = '';
+              }
+            </script>
+          </div>
+
+          <div class="project-section">
+            <h3>Usage</h3>
+            <ol>
+              <li>Place your dataset (e.g., <code>merged.csv</code> or <code>export_1740063344367.parquet</code>) in the project directory.</li>
+              <li>Run the preprocessing and training script:<br>
+                <code>python data_preprocessing_REN.py</code>
+              </li>
+              <li>The script will display training progress and save model checkpoints (e.g., <code>model_epoch_1.pth</code>).</li>
+              <li>To plot and compare model outputs and targets, run:<br>
+                <code>python test.py</code>
+              </li>
+            </ol>
           </div>
 
           <div class="project-section">
@@ -129,14 +176,13 @@
           <div class="project-section">
             <h3>Technologies Used</h3>
             <div class="tech-stack">
-              <span class="tech-tag">Deep Learning</span>
-              <span class="tech-tag">REN</span>
-              <span class="tech-tag">PyTorch</span>
-              <span class="tech-tag">Time Series</span>
-              <span class="tech-tag">Data Science</span>
               <span class="tech-tag">Python</span>
-              <span class="tech-tag">Industrial IoT</span>
-              <span class="tech-tag">Predictive Analytics</span>
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">Recurrent Equilibrium Network (REN)</span>
+              <span class="tech-tag">Time Series Forecasting</span>
+              <span class="tech-tag">Broyden’s Method</span>
+              <span class="tech-tag">Adam Optimizer</span>
             </div>
           </div>
 

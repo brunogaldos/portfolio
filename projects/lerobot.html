@@ -105,24 +105,44 @@
 
         <div class="project-content">
           <div class="project-section">
-            <h3>Project Overview</h3>
-            <p>LeRobot was developed during a global hackathon to create a robot that can pick up and move objects using both vision and language. The project brings together robotics, AI, and hands-on engineering to build a robot arm that understands what it sees and follows natural language instructions. It’s a showcase of how modern AI can make robots smarter and more adaptable in real-world tasks.</p>
+            <h3>Overview</h3>
+            <p>This project was developed during the Lerobot Global Hackathon for developing a pick and place task for the S0-101 robot using SMOLVLA. LeRobot is a modular, open-source robotic arm platform designed for research and rapid prototyping. The project covers the full process: assembly, calibration, and fine-tuning of the robot for advanced manipulation tasks.</p>
           </div>
 
           <div class="project-section">
-            <h3>Features & Components</h3>
+            <h3>Main Steps & Features</h3>
             <ul>
-              <li>Understands and follows natural language instructions</li>
-              <li>Sees and recognizes objects using advanced computer vision</li>
-              <li>Performs intelligent pick and place operations</li>
-              <li>Combines vision and language for flexible task execution</li>
-              <li>Easy to assemble and calibrate for new users</li>
-              <li>Open-source and designed for learning and experimentation</li>
+              <li><b>Assembly:</b> 3D-printed parts, modular design, and detailed joint-by-joint instructions for building the robot arm.</li>
+              <li><b>Calibration:</b> Ensures joint alignment for both leader and follower arms, critical for teleoperation and learning-based control.</li>
+              <li><b>Fine-Tuning:</b> Uses Hugging Face’s SmolVLA robotics foundation model, with instructions for dataset recording and model training.</li>
+              <li><b>Evaluation:</b> Tools for evaluating the fine-tuned model and teleoperation with the leader arm.</li>
             </ul>
           </div>
 
           <div class="project-section">
-            <h3>See It in Action</h3>
+            <h3>Usage</h3>
+            <ol>
+              <li><b>Assemble Your Robot:</b> Print and assemble all parts as per the bill of materials and step-by-step guide.</li>
+              <li><b>Install LeRobot:</b> <code>pip install -e ".[feetech]"</code></li>
+              <li><b>Configure Motors:</b> Use <code>python -m lerobot.find_port</code> to identify USB ports, then <code>python -m lerobot.setup_motors</code> for each motor.</li>
+              <li><b>Calibrate:</b> Run <code>python -m lerobot.calibrate</code> for both follower and leader arms, following on-screen instructions.</li>
+              <li><b>Fine-Tune SmolVLA:</b> Record a dataset (~50 episodes recommended), then train the model with <code>python -m lerobot.scripts.train</code>.</li>
+              <li><b>Evaluate:</b> Use <code>python -m lerobot.record</code> to test the fine-tuned model and teleoperation.</li>
+            </ol>
+          </div>
+
+          <div class="project-section">
+            <h3>Notes & Tips</h3>
+            <ul>
+              <li>Ensure motors are uniquely identified and properly wired.</li>
+              <li>Calibration is critical for motion fidelity.</li>
+              <li>Dataset size and diversity matter for model generalization.</li>
+              <li>Always verify USB port mappings before running scripts.</li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h3>Visual Results</h3>
             <div style="display: flex; flex-direction: column; align-items: center;">
               <div style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 600px; width: 100%; text-align: center;">
                 <video controls style="width:100%; max-width:580px; border-radius: 12px;">

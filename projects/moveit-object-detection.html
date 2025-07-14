@@ -105,28 +105,90 @@
 
         <div class="project-content">
           <div class="project-section">
-            <h3>Project Overview</h3>
-            <p>This project brings together a robot arm, a camera, and smart software to pick up objects automatically. Using computer vision, the robot can spot a cylinder, figure out where it is, and then plan a path to pick it up and move it. It’s a great example of how robots can see, think, and act in the real world, making automation more flexible and powerful.</p>
+            <h3>Overview</h3>
+            <p>This project demonstrates a complete picking task using a Franka Emika Panda robot arm equipped with an Intel RealSense D435 camera. The system detects a cylindrical object using a custom object detection script, computes the object's coordinates through frame transformation, and controls the Panda arm to grasp and place the object at a designated goal pose. The project uses ROS2 and MoveIt2 for robot motion and perception.</p>
           </div>
 
           <div class="project-section">
-            <h3>Features & Components</h3>
+            <h3>Key Features</h3>
             <ul>
-              <li>Detects objects in real time using a camera</li>
-              <li>Plans safe and efficient paths for the robot arm</li>
-              <li>Grasps and moves objects with precision</li>
-              <li>Combines vision and motion for smart automation</li>
-              <li>Easy to set up and adapt for new tasks</li>
+              <li><b>Object Detection:</b> Detects the circular surface of a cylindrical object using a RealSense D435 camera.</li>
+              <li><b>Coordinate Frame Transformation:</b> Converts object coordinates from camera frame to robot coordinate system.</li>
+              <li><b>Grasp and Place:</b> Executes a pick-and-place task using the Panda robot arm controlled via MoveIt2.</li>
             </ul>
-            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
-              <img src="moveit-object-detection/panda_arm_camera.png" alt="Panda Arm Camera View" style="max-width: 320px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18);" />
-            </div>
           </div>
 
           <div class="project-section">
-            <h3>See It in Action</h3>
+            <h3>Hardware Requirements</h3>
+            <ul>
+              <li>Franka Emika Panda Robot Arm</li>
+              <li>Intel RealSense D435 Camera</li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h3>Software Requirements</h3>
+            <ul>
+              <li>ROS2 (tested on Humble)</li>
+              <li>MoveIt2</li>
+              <li>RealSense ROS2 Wrapper for D435 camera</li>
+              <li>Custom Object detection package</li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h3>Usage</h3>
+            <ol>
+              <li><b>Install ROS2:</b> Follow the official <a href="https://docs.ros.org/en/foxy/Installation.html" target="_blank">ROS2 installation guide</a> for your OS.</li>
+              <li><b>Install MoveIt2:</b> Follow the <a href="https://moveit.ros.org/install-moveit2.html" target="_blank">MoveIt2 installation guide</a>.</li>
+              <li><b>Install RealSense ROS2 Wrapper:</b><br>
+                <code>sudo apt-get install ros-&lt;ros2-distro&gt;-realsense2-camera</code>
+              </li>
+              <li><b>Clone the Project Repository:</b><br>
+                <code>git clone https://github.com/brunogaldos/Moveit-object-detection.git</code>
+              </li>
+              <li><b>Build the Workspace:</b><br>
+                <code>cd ~/Moveit_object_detection<br>colcon build</code>
+              </li>
+              <li><b>Start the RealSense D435 Camera:</b><br>
+                <code>ros2 launch realsense2_camera rs_launch.py enable_rgbd:=true enable_sync:=true align_depth.enable:=true enable_color:=true enable_depth:=true</code>
+              </li>
+              <li><b>Run Object Detection Script:</b><br>
+                <code>ros2 run object_detection object_detection_transformed</code>
+              </li>
+              <li><b>MoveIt Pick and Place Task:</b><br>
+                <code>ros2 launch moveit2_tutorials mtc_demo.launch.py</code><br>
+                <code>ros2 launch mtc_tutorial pick_place_demo.launch.py</code>
+              </li>
+            </ol>
+          </div>
+
+          <div class="project-section">
+            <h3>Project Workflow</h3>
+            <ol>
+              <li><b>Object Detection:</b> The RealSense D435 camera captures RGB-D data, and the object detection script identifies the circular surface of the cylindrical object in the scene. The script outputs the detected object's pose in the camera frame.</li>
+              <li><b>Coordinate Transformation:</b> The detected object's pose is transformed from the camera's coordinate frame to the robot's coordinate frame using appropriate TF (transform) methods.</li>
+              <li><b>Pick-and-Place Task:</b> The transformed coordinates are fed into the MoveIt pipeline, which generates a motion plan for the Panda robot arm. The arm grasps the cylinder and places it in the designated goal pose.</li>
+            </ol>
+          </div>
+
+          <div class="project-section">
+            <h3>Future Improvements</h3>
+            <ul>
+              <li>Improve object detection for non-circular or irregular objects.</li>
+              <li>Add support for dynamic objects and real-time tracking.</li>
+              <li>Implement feedback control to improve grasp stability.</li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h3>Visual Results</h3>
             <div style="display: flex; flex-direction: column; align-items: center;">
               <div style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 600px; width: 100%; text-align: center;">
+                <img src="moveit-object-detection/panda_arm_camera.png" alt="Panda Arm Camera View" style="max-width: 500px; width: 100%; border-radius: 12px; margin-bottom: 0.5rem; cursor: pointer;" onclick="openModal(this.src)" />
+                <div style="color: #aaa; font-size: 1rem;">Panda Arm Camera View</div>
+              </div>
+              <div style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 600px; width: 100%; text-align: center; margin-top: 2rem;">
                 <video controls style="width:100%; max-width:580px; border-radius: 12px;">
                   <source src="moveit-object-detection/Screencast from 09-17-2024 07-24-48 PM.webm" type="video/webm">
                   Your browser does not support the video tag.
@@ -134,6 +196,21 @@
                 <div style="color: #aaa; font-size: 1rem; margin-top: 0.5rem;">Path Planning and Object Detection Demo<br>If the video does not play, <a href='moveit-object-detection/Screencast from 09-17-2024 07-24-48 PM.webm' style='color:#ff3258;' download>download and open it with VLC or a modern browser</a>.</div>
               </div>
             </div>
+            <!-- Modal for image enlargement -->
+            <div id="imgModal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); align-items:center; justify-content:center;">
+              <span onclick="closeModal()" style="position:absolute; top:30px; right:50px; color:#fff; font-size:2.5rem; cursor:pointer;">&times;</span>
+              <img id="modalImg" src="" style="max-width:90vw; max-height:90vh; border-radius: 16px; box-shadow: 0 2px 24px rgba(0,0,0,0.5);" />
+            </div>
+            <script>
+              function openModal(src) {
+                document.getElementById('imgModal').style.display = 'flex';
+                document.getElementById('modalImg').src = src;
+              }
+              function closeModal() {
+                document.getElementById('imgModal').style.display = 'none';
+                document.getElementById('modalImg').src = '';
+              }
+            </script>
           </div>
 
           <div class="project-section">
