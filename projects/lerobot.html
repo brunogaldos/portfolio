@@ -119,27 +119,6 @@
             </ul>
           </div>
 
-          <div class="project-section">
-            <h3>Usage</h3>
-            <ol>
-              <li><b>Assemble Your Robot:</b> Print and assemble all parts as per the bill of materials and step-by-step guide.</li>
-              <li><b>Install LeRobot:</b> <code>pip install -e ".[feetech]"</code></li>
-              <li><b>Configure Motors:</b> Use <code>python -m lerobot.find_port</code> to identify USB ports, then <code>python -m lerobot.setup_motors</code> for each motor.</li>
-              <li><b>Calibrate:</b> Run <code>python -m lerobot.calibrate</code> for both follower and leader arms, following on-screen instructions.</li>
-              <li><b>Fine-Tune SmolVLA:</b> Record a dataset (~50 episodes recommended), then train the model with <code>python -m lerobot.scripts.train</code>.</li>
-              <li><b>Evaluate:</b> Use <code>python -m lerobot.record</code> to test the fine-tuned model and teleoperation.</li>
-            </ol>
-          </div>
-
-          <div class="project-section">
-            <h3>Notes & Tips</h3>
-            <ul>
-              <li>Ensure motors are uniquely identified and properly wired.</li>
-              <li>Calibration is critical for motion fidelity.</li>
-              <li>Dataset size and diversity matter for model generalization.</li>
-              <li>Always verify USB port mappings before running scripts.</li>
-            </ul>
-          </div>
 
           <div class="project-section">
             <h3>Visual Results</h3>

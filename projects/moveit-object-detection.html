@@ -136,32 +136,6 @@
             </ul>
           </div>
 
-          <div class="project-section">
-            <h3>Usage</h3>
-            <ol>
-              <li><b>Install ROS2:</b> Follow the official <a href="https://docs.ros.org/en/foxy/Installation.html" target="_blank">ROS2 installation guide</a> for your OS.</li>
-              <li><b>Install MoveIt2:</b> Follow the <a href="https://moveit.ros.org/install-moveit2.html" target="_blank">MoveIt2 installation guide</a>.</li>
-              <li><b>Install RealSense ROS2 Wrapper:</b><br>
-                <code>sudo apt-get install ros-&lt;ros2-distro&gt;-realsense2-camera</code>
-              </li>
-              <li><b>Clone the Project Repository:</b><br>
-                <code>git clone https://github.com/brunogaldos/Moveit-object-detection.git</code>
-              </li>
-              <li><b>Build the Workspace:</b><br>
-                <code>cd ~/Moveit_object_detection<br>colcon build</code>
-              </li>
-              <li><b>Start the RealSense D435 Camera:</b><br>
-                <code>ros2 launch realsense2_camera rs_launch.py enable_rgbd:=true enable_sync:=true align_depth.enable:=true enable_color:=true enable_depth:=true</code>
-              </li>
-              <li><b>Run Object Detection Script:</b><br>
-                <code>ros2 run object_detection object_detection_transformed</code>
-              </li>
-              <li><b>MoveIt Pick and Place Task:</b><br>
-                <code>ros2 launch moveit2_tutorials mtc_demo.launch.py</code><br>
-                <code>ros2 launch mtc_tutorial pick_place_demo.launch.py</code>
-              </li>
-            </ol>
-          </div>
 
           <div class="project-section">
             <h3>Project Workflow</h3>
