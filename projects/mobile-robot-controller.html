@@ -106,7 +106,7 @@
         <div class="project-content">
           <div class="project-section">
             <h3>Overview</h3>
-            <p>This project is part of a Master's thesis at RWTH Aachen University, aiming to develop a controller for mobile robot navigation using a motion capture system. The system enables the robot to navigate and avoid obstacles autonomously, with pilot testing in simulation using ROS2 and Gazebo.</p>
+            <p>This project is part of a Master's thesis at RWTH Aachen University, aiming to develop a controller for mobile robot navigation using a motion capture system. The system enables the robot to navigate and avoid obstacles autonomously, with pilot testing in simulation using ROS2 and Gazebo and real-world testing in the lab, using a robotnik Kairos mobile base and a UR10 robotic manipulator.</p>
           </div>
 
           <div class="project-section">
@@ -114,17 +114,9 @@
             <ul>
               <li>Motion capture-based navigation and obstacle avoidance</li>
               <li>ROS2 and Gazebo simulation environment</li>
-              <li>Modular project structure with simulation and controller packages</li>
+              <li>Modular project structure with test simulation and controller packages</li>
               <li>Real-time control and topic publishing for robot movement</li>
-              <li>User input for start pose, goal pose, and velocity</li>
-            </ul>
-          </div>
-
-          <div class="project-section">
-            <h3>Technical Structure</h3>
-            <ul>
-              <li><b>Simulation Package (my_bot):</b> Core application running in Gazebo, simulating the mobile robot in a predefined environment.</li>
-              <li><b>Controller Package (my_controller):</b> Contains the node responsible for publishing control topics to the robot.</li>
+              <li>User input for start pose, goal pose, and velocity or optitrack anchor points</li>
             </ul>
           </div>
 
@@ -135,15 +127,12 @@
                 <img src="mobile-robot-controller/motive.png" alt="Motion Capture System" style="max-width: 320px; width: 100%; border-radius: 12px; margin-bottom: 0.5rem; cursor: pointer;" onclick="openModal(this.src)" />
                 <div style="color: #aaa; font-size: 1rem;">Motion Capture System Visualization</div>
               </div>
+              <div class="img-card" style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 340px; width: 100%; text-align: center;">
+                <img src="mobile-robot-controller/optitrack_diagram.png" alt="OptiTrack System Diagram" style="max-width: 320px; width: 100%; border-radius: 12px; margin-bottom: 0.5rem; cursor: pointer;" onclick="openModal(this.src)" />
+                <div style="color: #aaa; font-size: 1rem;">OptiTrack System Diagram</div>
+              </div>
             </div>
             <div style="display: flex; flex-direction: column; align-items: center; margin-top: 2rem; gap: 2rem;">
-              <div style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 600px; width: 100%; text-align: center;">
-                <video controls style="width:100%; max-width:560px; border-radius: 12px;">
-                  <source src="mobile-robot-controller/Screencast from 09-21-2024 11:00:43 AM.webm" type="video/webm">
-                  Your browser does not support the video tag.
-                </video>
-                <div style="color: #aaa; font-size: 1rem; margin-top: 0.5rem;">Mobile Robot Navigation Demo<br>If the video does not play, <a href='mobile-robot-controller/Screencast from 09-21-2024 11:00:43 AM.webm' style='color:#ff3258;' download>download and open it with VLC or a modern browser</a>.</div>
-              </div>
               <div style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 600px; width: 100%; text-align: center;">
                 <video controls style="width:100%; max-width:560px; border-radius: 12px;">
                   <source src="mobile-robot-controller/VID-20240517-WA0013.mp4" type="video/mp4">
