@@ -105,25 +105,64 @@
 
         <div class="project-content">
           <div class="project-section">
-            <h3>Project Overview</h3>
-            <p>This project is a modern web application that lets you chat with an AI about your own documents. Simply upload your text files, and the chatbot will answer your questions using the information inside. It’s designed to make document search and understanding as easy as having a conversation, whether you’re a student, professional, or just curious.</p>
+            <h3>Overview</h3>
+            <p>This project implements a Retrieval-Augmented Generation (RAG) chatbot with dynamic document upload. Users can upload their own .txt files and chat with an AI that answers questions based on the uploaded content. The system is designed for accurate, context-aware document Q&A and is built with a modern, real-time chat interface.</p>
           </div>
 
           <div class="project-section">
-            <h3>Features & Components</h3>
+            <h3>Key Features</h3>
             <ul>
-              <li>Upload and chat about your own documents</li>
-              <li>Smart AI answers based on your files</li>
-              <li>Modern, real-time chat interface</li>
-              <li>Works on desktop and mobile</li>
-              <li>Easy file management and status updates</li>
-              <li>Combines search and AI for accurate, relevant answers</li>
+              <li>Dynamic document upload with drag-and-drop interface</li>
+              <li>RAG model with Dense Passage Retrieval for accurate document search</li>
+              <li>Real-time, responsive chat UI</li>
+              <li>Multi-file management and status monitoring</li>
+              <li>Hybrid search (FAISS + BM25/TF-IDF) and reranking for best results</li>
+              <li>Works on desktop and mobile devices</li>
             </ul>
-            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
-              <img src="chatbot-rag/Screenshot from 2025-07-13 18-50-55.png" alt="Chatbot RAG Screenshot 1" style="max-width: 320px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18);" />
-              <img src="chatbot-rag/Screenshot from 2025-07-13 18-53-36.png" alt="Chatbot RAG Screenshot 2" style="max-width: 320px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18);" />
-              <img src="chatbot-rag/Screenshot from 2025-07-14 14-07-31.png" alt="Chatbot RAG Screenshot 3" style="max-width: 320px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18);" />
+          </div>
+
+          <div class="project-section">
+            <h3>Technical Architecture</h3>
+            <ul>
+              <li>Uploaded .txt files are chunked into smaller segments using semantic chunking</li>
+              <li>Hybrid search combines FAISS vector similarity with BM25/TF-IDF</li>
+              <li>BGE Reranker v2 M3 reranks retrieved documents for relevance</li>
+              <li>BART Large CNN generates contextual summaries based on reranked passages</li>
+              <li>Pipeline: Sentence Transformer → Hybrid Search → Reranker → Summarizer</li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h3>Visual Results</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+              <div class="img-card" style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 340px; width: 100%; text-align: center;">
+                <img src="chatbot-rag/Screenshot from 2025-07-13 18-50-55.png" alt="Chatbot RAG Screenshot 1" style="max-width: 320px; width: 100%; border-radius: 12px; margin-bottom: 0.5rem; cursor: pointer;" onclick="openModal(this.src)" />
+                <div style="color: #aaa; font-size: 1rem;">Document Upload and Chat Interface</div>
+              </div>
+              <div class="img-card" style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 340px; width: 100%; text-align: center;">
+                <img src="chatbot-rag/Screenshot from 2025-07-13 18-53-36.png" alt="Chatbot RAG Screenshot 2" style="max-width: 320px; width: 100%; border-radius: 12px; margin-bottom: 0.5rem; cursor: pointer;" onclick="openModal(this.src)" />
+                <div style="color: #aaa; font-size: 1rem;">Real-Time Chat with RAG</div>
+              </div>
+              <div class="img-card" style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 340px; width: 100%; text-align: center;">
+                <img src="chatbot-rag/Screenshot from 2025-07-14 14-07-31.png" alt="Chatbot RAG Screenshot 3" style="max-width: 320px; width: 100%; border-radius: 12px; margin-bottom: 0.5rem; cursor: pointer;" onclick="openModal(this.src)" />
+                <div style="color: #aaa; font-size: 1rem;">Multi-File Management</div>
+              </div>
             </div>
+            <!-- Modal for image enlargement -->
+            <div id="imgModal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); align-items:center; justify-content:center;">
+              <span onclick="closeModal()" style="position:absolute; top:30px; right:50px; color:#fff; font-size:2.5rem; cursor:pointer;">&times;</span>
+              <img id="modalImg" src="" style="max-width:90vw; max-height:90vh; border-radius: 16px; box-shadow: 0 2px 24px rgba(0,0,0,0.5);" />
+            </div>
+            <script>
+              function openModal(src) {
+                document.getElementById('imgModal').style.display = 'flex';
+                document.getElementById('modalImg').src = src;
+              }
+              function closeModal() {
+                document.getElementById('imgModal').style.display = 'none';
+                document.getElementById('modalImg').src = '';
+              }
+            </script>
           </div>
 
           <div class="project-section">

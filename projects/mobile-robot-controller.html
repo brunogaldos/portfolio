@@ -105,31 +105,61 @@
 
         <div class="project-content">
           <div class="project-section">
-            <h3>Project Overview</h3>
-            <p>This project is part of a Master’s thesis and focuses on building a smart controller for mobile robots. Using a motion capture system, the robot can navigate its environment and avoid obstacles on its own. The project is a great example of how robotics research can lead to practical solutions for real-world navigation challenges.</p>
+            <h3>Overview</h3>
+            <p>This project is part of a Master's thesis at RWTH Aachen University, aiming to develop a controller for mobile robot navigation using a motion capture system. The system enables the robot to navigate and avoid obstacles autonomously, with pilot testing in simulation using ROS2 and Gazebo.</p>
           </div>
 
           <div class="project-section">
-            <h3>Features & Components</h3>
+            <h3>Key Features</h3>
             <ul>
-              <li>Real-time motion capture and tracking for precise robot movement</li>
-              <li>Autonomous navigation with obstacle avoidance</li>
-              <li>Sensor fusion for accurate positioning</li>
-              <li>Advanced path planning and control algorithms</li>
-              <li>Simulation and real-world testing environments</li>
-              <li>Easy-to-use interface for setting goals and monitoring progress</li>
+              <li>Motion capture-based navigation and obstacle avoidance</li>
+              <li>ROS2 and Gazebo simulation environment</li>
+              <li>Modular project structure with simulation and controller packages</li>
+              <li>Real-time control and topic publishing for robot movement</li>
+              <li>User input for start pose, goal pose, and velocity</li>
             </ul>
-            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
-              <img src="mobile-robot-controller/motive.png" alt="Motion Capture System" style="max-width: 320px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18);" />
-            </div>
           </div>
 
           <div class="project-section">
-            <h3>See It in Action</h3>
-            <video controls style="width:100%; max-width:600px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); margin: 0 auto; display: block;">
-              <source src="mobile-robot-controller/Screencast from 09-21-2024 11:00:43 AM.webm" type="video/webm">
-              Your browser does not support the video tag.
-            </video>
+            <h3>Technical Structure</h3>
+            <ul>
+              <li><b>Simulation Package (my_bot):</b> Core application running in Gazebo, simulating the mobile robot in a predefined environment.</li>
+              <li><b>Controller Package (my_controller):</b> Contains the node responsible for publishing control topics to the robot.</li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h3>Visual Results</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+              <div class="img-card" style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 340px; width: 100%; text-align: center;">
+                <img src="mobile-robot-controller/motive.png" alt="Motion Capture System" style="max-width: 320px; width: 100%; border-radius: 12px; margin-bottom: 0.5rem; cursor: pointer;" onclick="openModal(this.src)" />
+                <div style="color: #aaa; font-size: 1rem;">Motion Capture System Visualization</div>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin-top: 2rem;">
+              <div style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 600px; width: 100%; text-align: center;">
+                <video controls style="width:100%; max-width:560px; border-radius: 12px;">
+                  <source src="mobile-robot-controller/Screencast from 09-21-2024 11:00:43 AM.webm" type="video/webm">
+                  Your browser does not support the video tag.
+                </video>
+                <div style="color: #aaa; font-size: 1rem; margin-top: 0.5rem;">Mobile Robot Navigation Demo<br>If the video does not play, <a href='mobile-robot-controller/Screencast from 09-21-2024 11:00:43 AM.webm' style='color:#ff3258;' download>download and open it with VLC or a modern browser</a>.</div>
+              </div>
+            </div>
+            <!-- Modal for image enlargement -->
+            <div id="imgModal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); align-items:center; justify-content:center;">
+              <span onclick="closeModal()" style="position:absolute; top:30px; right:50px; color:#fff; font-size:2.5rem; cursor:pointer;">&times;</span>
+              <img id="modalImg" src="" style="max-width:90vw; max-height:90vh; border-radius: 16px; box-shadow: 0 2px 24px rgba(0,0,0,0.5);" />
+            </div>
+            <script>
+              function openModal(src) {
+                document.getElementById('imgModal').style.display = 'flex';
+                document.getElementById('modalImg').src = src;
+              }
+              function closeModal() {
+                document.getElementById('imgModal').style.display = 'none';
+                document.getElementById('modalImg').src = '';
+              }
+            </script>
           </div>
 
           <div class="project-section">

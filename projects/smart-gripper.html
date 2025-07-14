@@ -105,25 +105,53 @@
 
         <div class="project-content">
           <div class="project-section">
-            <h3>Project Overview</h3>
-            <p>This project demonstrates a smart robotic gripper that can pick up all kinds of objects—from delicate balloons to heavy metal rods—without needing to be reconfigured. By combining vision, adaptive control, and a user-friendly interface, the gripper can sense, classify, and handle objects safely and efficiently. It’s a great example of how robotics can adapt to real-world challenges with intelligence and flexibility.</p>
+            <h3>Overview</h3>
+            <p>This project demonstrates an adaptive, torque-controlled robotic gripper capable of handling a wide spectrum of objects—from fragile balloons to heavy metal rods—without manual reconfiguration. The system combines precision magnetic sensing, adaptive PID torque control, lightweight deep learning, and an intuitive GUI to achieve both hands-on versatility and vision-guided autonomy.</p>
           </div>
 
           <div class="project-section">
-            <h3>Features & Components</h3>
+            <h3>Key Features</h3>
             <ul>
-              <li>Automatically adjusts grip for different objects</li>
-              <li>Uses computer vision to recognize and classify items</li>
-              <li>Torque-controlled for safe and stable handling</li>
-              <li>Manual and automatic operation modes</li>
-              <li>Easy-to-use interface with live feedback</li>
-              <li>Handles both soft and hard objects with precision</li>
+              <li>Torque-controlled gripping with PID and safety clamp</li>
+              <li>Vision-based object classification using a YOLO-style CNN</li>
+              <li>Automatic and manual operation modes via a two-tab GUI</li>
+              <li>Real-time feedback and adaptive force control</li>
+              <li>Online fine-tuning for new object classes</li>
             </ul>
           </div>
 
           <div class="project-section">
-            <h3>See It in Action</h3>
-            <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
+            <h3>Technical Details</h3>
+            <ul>
+              <li><b>Task 1: Sensor Filtering and Torque Control</b>
+                <ul>
+                  <li>Zero-bias correction and median filtering of Z-axis magnetic readings</li>
+                  <li>PID controller (kp=2.5, ki=0.5, kd=0.1) for smooth, stable closing</li>
+                  <li>Safety clamp enforces voltage limits and automatic STOP on contact detection</li>
+                </ul>
+              </li>
+              <li><b>Task 2: Vision-Based Object Classification</b>
+                <ul>
+                  <li>YOLO-style CNN trained on ~100 images (metal, wood, balloon, background)</li>
+                  <li>Hard objects trigger high-torque routine; soft objects use low-force PID sequence</li>
+                  <li>Model can be incrementally retrained online</li>
+                </ul>
+              </li>
+              <li><b>GUI Modes</b>
+                <ul>
+                  <li>Manual: Hard/Soft presets, Open/Close buttons, real-time status bar</li>
+                  <li>Automatic: Live camera feed, auto-actuation, action log, pause control</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h3>Visual Results</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+              <!-- No images in directory, so skip image cards -->
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center; margin-top: 2rem;">
               <div style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 600px; width: 100%; text-align: center;">
                 <video controls style="width:100%; max-width:560px; border-radius: 12px;">
                   <source src="smart-gripper/WhatsApp Video 2025-07-12 at 11.28.03 PM.mp4" type="video/mp4">
@@ -153,6 +181,21 @@
                 <div style="color: #aaa; font-size: 1rem; margin-top: 0.5rem;">Gripper: Real-World Task Example</div>
               </div>
             </div>
+            <!-- Modal for image enlargement (if images are added in the future) -->
+            <div id="imgModal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); align-items:center; justify-content:center;">
+              <span onclick="closeModal()" style="position:absolute; top:30px; right:50px; color:#fff; font-size:2.5rem; cursor:pointer;">&times;</span>
+              <img id="modalImg" src="" style="max-width:90vw; max-height:90vh; border-radius: 16px; box-shadow: 0 2px 24px rgba(0,0,0,0.5);" />
+            </div>
+            <script>
+              function openModal(src) {
+                document.getElementById('imgModal').style.display = 'flex';
+                document.getElementById('modalImg').src = src;
+              }
+              function closeModal() {
+                document.getElementById('imgModal').style.display = 'none';
+                document.getElementById('modalImg').src = '';
+              }
+            </script>
           </div>
 
           <div class="project-section">

@@ -105,39 +105,36 @@
 
         <div class="project-content">
           <div class="project-section">
-            <h3>Project Overview</h3>
-            <p>This project brings advanced navigation to mobile robots using LiDAR sensors and smart software. The robot can map its surroundings, plan safe paths, and avoid obstacles all on its own. The system is designed to be flexible and scalable, making it a great foundation for research, industry, or anyone interested in robotics.</p>
+            <h3>Overview</h3>
+            <p>The Navigation 2 (nav2) package is a core component of the ROS 2 ecosystem, providing advanced navigation and path planning capabilities for mobile robots and autonomous systems. nav2 builds on the original ROS Navigation Stack, offering a more flexible and scalable solution for a wide range of robotic platforms. This repository contains configuration and launch packages for nav2, as well as scripts for running the stack in Docker containers.</p>
           </div>
 
           <div class="project-section">
-            <h3>Features & Components</h3>
+            <h3>Key Features</h3>
             <ul>
-              <li>Real-time mapping and navigation with LiDAR</li>
-              <li>Dynamic obstacle detection and avoidance</li>
-              <li>Flexible path planning for complex environments</li>
-              <li>Precise localization and pose estimation</li>
-              <li>Easy integration with ROS2 and Docker</li>
-              <li>Simulation and real-robot support</li>
+              <li>Real-time navigation and path planning for mobile robots</li>
+              <li>Flexible configuration for different robot platforms</li>
+              <li>Dockerized deployment for easy setup and reproducibility</li>
+              <li>Support for both simulation and real-robot operation</li>
+              <li>Integration with ROS 2 ecosystem and tools</li>
             </ul>
           </div>
 
           <div class="project-section">
-            <h3>Technologies Used</h3>
-            <div class="tech-stack">
-              <span class="tech-tag">ROS</span>
-              <span class="tech-tag">LiDAR</span>
-              <span class="tech-tag">SLAM</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">C++</span>
-              <span class="tech-tag">Path Planning</span>
-              <span class="tech-tag">Navigation Stack</span>
-              <span class="tech-tag">Sensor Fusion</span>
-            </div>
+            <h3>Technical Structure</h3>
+            <ul>
+              <li>Docker-based build and deployment scripts for nav2</li>
+              <li>CI/CD pipeline for automated building and deployment</li>
+              <li>Configuration for both local and distributed robot operation</li>
+              <li>Support for running nav2 in simulation (Gazebo) and on real robots</li>
+            </ul>
           </div>
 
           <div class="project-section">
-            <h3>Project Impact</h3>
-            <p>This navigation system makes robots smarter and more independent, allowing them to move safely in changing environments. It’s a valuable tool for anyone building autonomous robots, from students to professionals in industry.</p>
+            <h3>Known Problems</h3>
+            <ul>
+              <li>Transform Data too old Error: Occurs when converting between odometry and map frames. No solution found yet.</li>
+            </ul>
           </div>
 
           <div class="project-section">
