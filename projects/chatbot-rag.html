@@ -138,33 +138,20 @@
             <h3>Visual Results</h3>
             <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
               <div class="img-card" style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 340px; width: 100%; text-align: center;">
-                <img src="chatbot-rag/Screenshot from 2025-07-13 18-50-55.png" alt="GEO AI MODEL Screenshot 1" style="max-width: 320px; width: 100%; border-radius: 12px; margin-bottom: 0.5rem; cursor: pointer;" onclick="openModal(this.src)" />
-                <div style="color: #aaa; font-size: 1rem;">Geospatial Data Processing Interface</div>
+                <video controls style="max-width: 320px; width: 100%; border-radius: 12px; margin-bottom: 0.5rem;">
+                  <source src="chatbot-rag/2_polisense_demonstration.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div style="color: #aaa; font-size: 1rem;">Polisense Demonstration</div>
               </div>
               <div class="img-card" style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 340px; width: 100%; text-align: center;">
-                <img src="chatbot-rag/Screenshot from 2025-07-13 18-53-36.png" alt="GEO AI MODEL Screenshot 2" style="max-width: 320px; width: 100%; border-radius: 12px; margin-bottom: 0.5rem; cursor: pointer;" onclick="openModal(this.src)" />
-                <div style="color: #aaa; font-size: 1rem;">Spatial Analysis and Prediction Results</div>
-              </div>
-              <div class="img-card" style="background: #181820; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.18); padding: 1rem; max-width: 340px; width: 100%; text-align: center;">
-                <img src="chatbot-rag/Screenshot from 2025-07-14 14-07-31.png" alt="GEO AI MODEL Screenshot 3" style="max-width: 320px; width: 100%; border-radius: 12px; margin-bottom: 0.5rem; cursor: pointer;" onclick="openModal(this.src)" />
-                <div style="color: #aaa; font-size: 1rem;">Multi-Dataset Geospatial Analysis</div>
+                <video controls style="max-width: 320px; width: 100%; border-radius: 12px; margin-bottom: 0.5rem;">
+                  <source src="chatbot-rag/3_Pitch_video_Polisense.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div style="color: #aaa; font-size: 1rem;">Polisense Pitch Video</div>
               </div>
             </div>
-            <!-- Modal for image enlargement -->
-            <div id="imgModal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); align-items:center; justify-content:center;">
-              <span onclick="closeModal()" style="position:absolute; top:30px; right:50px; color:#fff; font-size:2.5rem; cursor:pointer;">&times;</span>
-              <img id="modalImg" src="" style="max-width:90vw; max-height:90vh; border-radius: 16px; box-shadow: 0 2px 24px rgba(0,0,0,0.5);" />
-            </div>
-            <script>
-              function openModal(src) {
-                document.getElementById('imgModal').style.display = 'flex';
-                document.getElementById('modalImg').src = src;
-              }
-              function closeModal() {
-                document.getElementById('imgModal').style.display = 'none';
-                document.getElementById('modalImg').src = '';
-              }
-            </script>
           </div>
 
           <div class="project-section">
